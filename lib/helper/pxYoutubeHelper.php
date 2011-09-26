@@ -30,6 +30,9 @@ function px_youtube_video($video_id, $width = 640, $height = 390, $params = arra
 
 	if($type == 'old') return px_old_youtube_video($video_id, $width, $height, $params);
 
+	$volume = '';
+	$quality = '';
+
 	if(isset($params['volume'])){
 		$volume = 'event.target.setVolume('.$params['volume'].');';
 		unset($params['volume']);
@@ -51,8 +54,8 @@ function px_youtube_video($video_id, $width = 640, $height = 390, $params = arra
 				var player;
 				function onYouTubePlayerAPIReady() {
 			        player = new YT.Player("player_'.$video_id.'", {
-			          height: "'.$width.'",
-			          width: "'.$height.'",
+			          height: "'.$height.'",
+			          width: "'.$width.'",
 			          videoId: "'.$video_id.'",
 			          playerVars: '.$player_vars.',
 			          events: {
@@ -87,15 +90,6 @@ function px_youtube_video($video_id, $width = 640, $height = 390, $params = arra
 * @param array $params an array containing specific javascript API parameters
 */
 function px_old_youtube_video($video_id, $width = 640, $height = 390, $params = array()){
-	if(isset($params['volume'])){
-		$volume = 'event.target.setVolume('.$params['volume'].');';
-		unset($params['volume']);
-	}
-	if(isset($params['quality'])){
-		$quality = 'event.target.setPlaybackQuality("'.$params['quality'].'");';
-		unset($params['quality']);
-	}
-
 	$html = '';
 
 	$html .= '<object style="height: '.$height.'px; width: '.$width.'px">';
