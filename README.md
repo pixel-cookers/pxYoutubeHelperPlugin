@@ -6,22 +6,19 @@ Put the plugin in your symfony installation :
 
 If you are using Git, use the following command in your project root folder : 
 
-``
 		git submodule add git@github.com:pixel-cookers/pxYoutubeHelperPlugin.git plugins/pxYoutubeHelperPlugin
-``
 
+		
 Else go to https://github.com/pixel-cookers/pxYoutubeHelperPlugin and download the archive.
 Unzip it in SF_DIR/plugins/pxYoutubeHelperPlugin
 
 Add the pxYoutubeHelper plugin to your `SF_DIR/config/ProjectConfiguration.class.php`
-
 
 	public function setup(){
 			$this->enablePlugins(
 				'pxYoutubeHelperPlugin'
 			);
 		}
-
 
 There is two ways to embed a Youtube video : 
 
@@ -34,13 +31,13 @@ There is two ways to embed a Youtube video :
 
 Just call the helper like this
 
-``
+
 		<?php echo px_youtube_video('kM9iYy8-sGQ', 620, 382)?>
-``
+
 
 Output :
 
-``
+
 		<div id="player_kM9iYy8-sGQ"></div>
 		<script>
 			var tag = document.createElement("script");
@@ -67,17 +64,17 @@ Output :
 			}
 			function onPlayerStateChange(event) {}
 	</script>
-``
+
 
 ### Javascript API
 
-``
+
 		<?php echo px_youtube_video('kM9iYy8-sGQ', 620, 382, array(), array(), 'old')?>
-``
+
 
 Output : 
 
-``
+
 		<object style="height: 382px; width: 620px">
 			<param name="movie" value="http://www.youtube.com/v/kM9iYy8-sGQ?version=3&feature=player_embedded">
 			<param name="allowFullScreen" value="true">
@@ -91,17 +88,17 @@ Output :
 				height="382" 
 				src="http://www.youtube.com/v/kM9iYy8-sGQ?version=3&feature=player_embedded">
 		</object>
-``
+
 
 Advanced config example : 
 
-``
+
 	<?php echo px_youtube_video('kM9iYy8-sGQ', 620, 382, array('controls'=> 0, 'rel' => 0, 'showinfo' => 0), array(), 'old')?>
-``
+
 
 Output : 
 
-``
+
 		<object style="height: 382px; width: 620px">
 			<param name="movie" value="http://www.youtube.com/v/kM9iYy8-sGQ?version=3&feature=player_embedded&controls=0&rel=0&showinfo=0">
 			<param name="allowFullScreen" value="true">
@@ -115,4 +112,3 @@ Output :
 				height="382" 
 				src="http://www.youtube.com/v/kM9iYy8-sGQ?version=3&feature=player_embedded&controls=0&rel=0&showinfo=0">
 		</object>
-``
