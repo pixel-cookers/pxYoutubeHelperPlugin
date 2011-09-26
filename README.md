@@ -20,7 +20,7 @@ Add the pxYoutubeHelper plugin to your `SF_DIR/config/ProjectConfiguration.class
 			);
 		}
 
-There is two ways to embed a Youtube video : 
+There are two ways to embed a Youtube video : 
 
 
 1. The new one : iframe API</li>
