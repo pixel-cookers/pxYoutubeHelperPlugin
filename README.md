@@ -10,7 +10,7 @@ If you are using Git, use the following command in your project root folder :
 
 		
 Else go to https://github.com/pixel-cookers/pxYoutubeHelperPlugin and download the archive.
-Unzip it in SF_DIR/plugins/pxYoutubeHelperPlugin
+Unzip it in `SF_DIR/plugins/pxYoutubeHelperPlugin`
 
 Add the pxYoutubeHelper plugin to your `SF_DIR/config/ProjectConfiguration.class.php`
 
