@@ -15,14 +15,13 @@ Unzip it in SF_DIR/plugins/pxYoutubeHelperPlugin
 
 Add the pxYoutubeHelper plugin to your `SF_DIR/config/ProjectConfiguration.class.php`
 
-``
-	public function setup\(\)\{
 
-			$this\->enablePlugins\(
+	public function setup(){
+			$this->enablePlugins(
 				'pxYoutubeHelperPlugin'
 			);
-		\}
-``
+		}
+
 
 There is two ways to embed a Youtube video : 
 
